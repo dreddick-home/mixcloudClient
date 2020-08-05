@@ -28,10 +28,6 @@ Flags:
 ```
 
 
-```
-mixcloudclient search -t 'nick warren' -i cream
-```
-
 ![Nick Warren Search](https://raw.githubusercontent.com/dreddick-home/mixcloudclient/master/img/mixcloudclient_usage1.gif)
 
 
