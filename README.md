@@ -1,6 +1,16 @@
 # mixcloudclient
 
-A simple CLI for interacting with mixcloud
+A simple CLI for interacting with Mixcloud
+
+## Description
+
+This is a utility for interacting with [Mixcloud](https://www.mixcloud.com).
+
+The project was started to find an easier way to search Mixcloud for content.
+
+### Search
+
+The search function uses go routines to query the Mixcloud API quickly using a search term. Client-side filters can be applied to exclude or include items from the results.
 
 ## Usage
 
@@ -13,8 +23,6 @@ $ mixcloudclient [command] [flags]
 ### search
 
 ```
-  mixcloudclient search [flags]
-
 Flags:
   -e, --excludes strings   Must exclude term, multiple items accepted.
   -h, --help               help for search
