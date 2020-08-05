@@ -49,7 +49,7 @@ func init() {
 
 	searchCmd.Flags().StringP("term", "t", "", "Search Term")
 	searchCmd.MarkFlagRequired("term")
-	searchCmd.Flags().Int32P("max", "m", 5, "Max results (in multiples of 100). Default 5.")
+	searchCmd.Flags().Int32P("max", "m", 20, "Max results (in multiples of 100). Default 20 (2000).")
 	searchCmd.Flags().Int32P("workers", "w", cores, "The max number of concurrent workers. Defaults to number of cores of system.")
 	searchCmd.Flags().StringSliceP("excludes", "e", []string{}, "Must exclude term, multiple items accepted.")
 	searchCmd.Flags().StringSliceP("includes", "i", []string{}, "Must include term, multiple items accepted.")
