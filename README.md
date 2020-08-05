@@ -1,6 +1,6 @@
 # mixcloudclient
 
-A simple CLI for interacting with mixcloud
+A simple CLI for interacting with Mixcloud
 
 ## Description
 
