@@ -17,9 +17,11 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/spf13/cobra/doc"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
@@ -29,12 +31,13 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "mixcloudClient",
+	Use:   "mixcloudclient",
 	Short: "A simple CLI for interacting with mixcloud",
 	Long:  `A simple CLI for interacting with mixcloud`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//	Run: func(cmd *cobra.Command, args []string) { },
+
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -53,11 +56,15 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.mixcloudClient.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.mixcloudclient.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	err := doc.GenMarkdownTree(rootCmd, "/tmp")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 // initConfig reads in config file and ENV variables if set.
@@ -73,9 +80,9 @@ func initConfig() {
 			os.Exit(1)
 		}
 
-		// Search config in home directory with name ".mixcloudClient" (without extension).
+		// Search config in home directory with name ".mixcloudclient" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".mixcloudClient")
+		viper.SetConfigName(".mixcloudclient")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
