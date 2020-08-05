@@ -4,6 +4,11 @@ A simple CLI for interacting with mixcloud
 
 ## Usage
 
+Use the following syntax to run mixcloudclient commands from your terminal window:
+
+```console
+$ mixcloudclient [command] [flags]
+```
 
 ### search
 
@@ -19,26 +24,21 @@ Flags:
   -w, --workers int32      The max number of concurrent workers. Defaults to number of cores of system. (default 8)
 ```
 
-#### Example
-
-Find mixes using term 'nick warren' and only return those which include 'cream'
-
-```
-mixcloudclient search -t 'nick warren' -i cream
-```
 
 ![Nick Warren Search](https://raw.githubusercontent.com/dreddick-home/mixcloudclient/master/img/mixcloudclient_usage1.gif)
 
 
 ## Install
 
-### Using go
+### Build and Install the Binaries from Source
 
-```console
-$ go get -u github.com/dreddick-home/mixcloudclient
-```
+#### Prerequisite Tools
 
-Install in a custom location
+* Git
+* Go 
+
+
+#### Fetch from GitHub
 
 ```console
 $ git clone https://github.com/dreddick-home/mixcloudclient.git
