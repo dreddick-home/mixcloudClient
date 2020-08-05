@@ -2,7 +2,7 @@
 
 A simple CLI for interacting with Mixcloud
 
-<p align="center">
+<p align="left">
 <img src="https://img.shields.io/github/go-mod/go-version/dreddick-home/mixcloudclient">
 <img src="https://img.shields.io/github/v/release/dreddick-home/mixcloudclient">
 </p>
