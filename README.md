@@ -20,14 +20,16 @@ Use the following syntax to run mixcloudclient commands from your terminal windo
 $ mixcloudclient [command] [flags]
 ```
 
-### search
+### Commands
+
+#### Search
 
 ```
 Flags:
   -e, --excludes strings   Must exclude term, multiple items accepted.
   -h, --help               help for search
   -i, --includes strings   Must include term, multiple items accepted.
-  -m, --max int32          Max results (in multiples of 100). Default 5. (default 5)
+  -m, --max int32          Max results (in 100s). Default 20.
   -t, --term string        Search Term
   -w, --workers int32      The max number of concurrent workers. Defaults to number of cores of system. (default 8)
 ```
