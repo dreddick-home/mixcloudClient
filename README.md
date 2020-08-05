@@ -27,6 +27,8 @@ Find mixes using term 'nick warren' and only return those which include 'cream'
 mixcloudclient search -t 'nick warren' -i cream
 ```
 
+![Nick Warren Search](https://raw.githubusercontent.com/dreddick-home/mixcloudclient/master/img/mixcloudclient_usage1.gif)
+
 
 ## Install
 
