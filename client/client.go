@@ -175,7 +175,10 @@ func (c *Client) GetAsync(wg *sync.WaitGroup, q chan queueItem) {
 		url := c.GetOffsetURL(offset)
 		wg.Add(1)
 		go func(url string) {
-			resp, _ := http.Get(url)
+			resp, err := http.Get(url)
+			if err != nil {
+				fmt.Println(err)
+			}
 			dec := json.NewDecoder(resp.Body)
 			a := Result{}
 			dec.Decode(&a)
