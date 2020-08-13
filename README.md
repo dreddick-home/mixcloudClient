@@ -44,6 +44,12 @@ Flags:
 
 ![Nick Warren Search](https://raw.githubusercontent.com/dreddick-home/mixcloudclient/master/img/mixcloudclient_usage1.gif)
 
+## Docker
+
+```console
+$ docker run dreddick/mixcloudclient:v0.0.2 search -t 'nick warren' -i 1995
+```
+
 
 ## Install
 
