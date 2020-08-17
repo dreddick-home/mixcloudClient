@@ -6,6 +6,8 @@ A simple CLI for interacting with Mixcloud
 <img src="https://img.shields.io/github/go-mod/go-version/dreddick-home/mixcloudclient">
 <img src="https://img.shields.io/github/v/release/dreddick-home/mixcloudclient">
 <img src="https://github.com/dreddick-home/mixcloudclient/workflows/CICD/badge.svg">
+<img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
+<img src="https://goreportcard.com/badge/github.com/dreddick-home/mixcloudclient">
 </p>
 
 
