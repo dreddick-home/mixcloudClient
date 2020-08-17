@@ -21,6 +21,7 @@ type Filter struct {
 	Includes *regexp.Regexp
 }
 
+// NewFilter returns a new filter
 func NewFilter(excludes []string, includes []string) *Filter {
 	var eregex *regexp.Regexp
 	if len(excludes) != 0 {
@@ -47,6 +48,8 @@ func NewFilter(excludes []string, includes []string) *Filter {
 
 }
 
+// ConvertSearchString converts a search term to match
+// those found in mixcloud results
 func ConvertSearchString(s string) string {
 	var re = regexp.MustCompile(" ")
 	term := re.ReplaceAllString(s, "-")
@@ -165,6 +168,8 @@ func (c *Client) SearchAsync(max int32, workers int32) {
 
 }
 
+// GetAsync asynchronously GETs a mixcloud URL pulling in items
+// from a channel
 func (c *Client) GetAsync(wg *sync.WaitGroup, q chan queueItem) {
 	for done := false; done == false; {
 		item := <-q
@@ -192,6 +197,8 @@ func (c *Client) GetAsync(wg *sync.WaitGroup, q chan queueItem) {
 	}
 }
 
+// FilterResults filters the results according to the filters
+// set on the client
 func (c *Client) FilterResults(r Result) Result {
 	if c.filter == nil {
 		return r
